@@ -5,7 +5,7 @@ class Request
     
     public static function uri()
     {   
-        //var_dump(str_replace("/DigitalHouseWork/PHP_Alternativos/Router_V2/", '' ,$_SERVER['REQUEST_URI'])); exit;
-        return str_replace("/DigitalHouseWork/PHP_Alternativos/Router_V2/", '' ,$_SERVER['REQUEST_URI']);
+        $dir = dirname($_SERVER['PHP_SELF']) . "/";
+        return str_replace($dir, '' ,$_SERVER['REQUEST_URI']);
     }
 }
